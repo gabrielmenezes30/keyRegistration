@@ -1,0 +1,48 @@
+<style>
+    section{
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card{
+        width: 175px;
+        background-color: rgb(233, 237, 240);
+        padding: 1px;
+        margin-top: 4px;
+        color: #111;
+        font-weight: bold;
+        text-align: center;
+        margin-left: 3px;
+    }
+</style>
+
+<main>
+<h1>Rota de keys</h1>
+
+<div class="form-control">
+    <form action="/chaves/cadastrar" method="post" class="form">
+    <input type="hidden" id="{{_id}}">
+        <label for="">Cadastre uma chave</label>
+        <input type="text" name="name">
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+</main>
+
+<h2>Chaves Cadastradas</h2>
+<section>
+    {{#each keys}}
+    <div class="card">
+        <div class="card-body">
+            <p>{{name}}</p>
+        </div>
+    </div>
+    {{else}}
+
+    {{/each}}
+</section>
+
+
+
+
+
